@@ -1,6 +1,6 @@
 
 import React, { useState } from 'react';
-import { Link } from 'react-router-dom';
+import { Link, useNavigate } from 'react-router-dom';
 import Header from '@/components/Header';
 import Footer from '@/components/Footer';
 import { Button } from '@/components/ui/button';
@@ -10,6 +10,7 @@ import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
 import { Eye, EyeOff, Mail, Lock, User, Phone } from 'lucide-react';
 
 const Register = () => {
+  const navigate = useNavigate();
   const [showPassword, setShowPassword] = useState(false);
   const [formData, setFormData] = useState({
     firstName: '',
@@ -28,7 +29,15 @@ const Register = () => {
       alert('Les mots de passe ne correspondent pas !');
       return;
     }
-    alert('Compte créé avec succès !');
+    
+    // Simulation de création de compte
+    if (formData.accountType === 'seller' || formData.accountType === 'artisan') {
+      alert('Compte vendeur créé avec succès ! Redirection vers votre dashboard...');
+      navigate('/dashboard');
+    } else {
+      alert('Compte acheteur créé avec succès !');
+      navigate('/');
+    }
   };
 
   const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLSelectElement>) => {

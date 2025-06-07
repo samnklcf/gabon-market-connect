@@ -11,6 +11,7 @@ import GabonCrafts from "./pages/GabonCrafts";
 import Checkout from "./pages/Checkout";
 import Login from "./pages/Login";
 import Register from "./pages/Register";
+import Dashboard from "./pages/Dashboard";
 import About from "./pages/About";
 import BecomeSeller from "./pages/BecomeSeller";
 import Cart from "./components/Cart";
@@ -33,6 +34,7 @@ const App = () => (
           <Route path="/checkout" element={<Checkout />} />
           <Route path="/login" element={<Login />} />
           <Route path="/register" element={<Register />} />
+          <Route path="/dashboard" element={<Dashboard />} />
           <Route path="/about" element={<About />} />
           <Route path="/become-seller" element={<BecomeSeller />} />
           {/* ADD ALL CUSTOM ROUTES ABOVE THE CATCH-ALL "*" ROUTE */}
