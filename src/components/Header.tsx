@@ -3,6 +3,7 @@ import React, { useState } from 'react';
 import { Search, ShoppingCart, User, Menu, X, Globe } from 'lucide-react';
 import { Button } from '@/components/ui/button';
 import { Input } from '@/components/ui/input';
+import { Link } from 'react-router-dom';
 
 const Header = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -31,9 +32,11 @@ const Header = () => {
         <div className="flex items-center justify-between py-4">
           {/* Logo */}
           <div className="flex items-center">
-            <h1 className="text-2xl font-bold bg-gradient-to-r from-gabon-green to-gabon-blue bg-clip-text text-transparent">
-              GabMarketHub
-            </h1>
+            <Link to="/">
+              <h1 className="text-2xl font-bold bg-gradient-to-r from-gabon-green to-gabon-blue bg-clip-text text-transparent">
+                GabMarketHub
+              </h1>
+            </Link>
           </div>
 
           {/* Search bar */}
@@ -57,12 +60,14 @@ const Header = () => {
               <User className="w-5 h-5" />
               <span>Connexion</span>
             </Button>
-            <Button variant="ghost" className="relative">
-              <ShoppingCart className="w-5 h-5" />
-              <span className="absolute -top-2 -right-2 bg-gabon-yellow text-gabon-gray text-xs rounded-full w-5 h-5 flex items-center justify-center">
-                0
-              </span>
-            </Button>
+            <Link to="/cart">
+              <Button variant="ghost" className="relative">
+                <ShoppingCart className="w-5 h-5" />
+                <span className="absolute -top-2 -right-2 bg-gabon-yellow text-gabon-gray text-xs rounded-full w-5 h-5 flex items-center justify-center">
+                  3
+                </span>
+              </Button>
+            </Link>
             
             {/* Mobile menu button */}
             <Button 
@@ -78,7 +83,8 @@ const Header = () => {
         {/* Navigation menu */}
         <nav className={`md:block ${isMenuOpen ? 'block' : 'hidden'} pb-4`}>
           <ul className="flex flex-col md:flex-row space-y-2 md:space-y-0 md:space-x-8">
-            <li><a href="#" className="text-gabon-gray hover:text-gabon-green font-medium transition-colors">Accueil</a></li>
+            <li><Link to="/" className="text-gabon-gray hover:text-gabon-green font-medium transition-colors">Accueil</Link></li>
+            <li><Link to="/products" className="text-gabon-gray hover:text-gabon-green font-medium transition-colors">Tous les Produits</Link></li>
             <li><a href="#" className="text-gabon-gray hover:text-gabon-green font-medium transition-colors">Produits Italiens</a></li>
             <li><a href="#" className="text-gabon-gray hover:text-gabon-green font-medium transition-colors">Artisanat Gabonais</a></li>
             <li><a href="#" className="text-gabon-gray hover:text-gabon-green font-medium transition-colors">Électronique</a></li>

@@ -2,10 +2,11 @@
 import React from 'react';
 import { Button } from '@/components/ui/button';
 import { ArrowRight, ShoppingBag, Truck, Shield } from 'lucide-react';
+import { Link } from 'react-router-dom';
 
 const HeroSection = () => {
   return (
-    <section className="relative overflow-hidden min-h-screen">
+    <section className="relative overflow-hidden h-screen">
       {/* Background image */}
       <div 
         className="absolute inset-0 bg-cover bg-center bg-no-repeat"
@@ -20,8 +21,8 @@ const HeroSection = () => {
       {/* Hero pattern overlay */}
       <div className="absolute inset-0 hero-pattern"></div>
 
-      <div className="relative container mx-auto px-4 py-16 lg:py-24">
-        <div className="grid lg:grid-cols-2 gap-12 items-center min-h-[80vh]">
+      <div className="relative container mx-auto px-4 py-16 lg:py-24 h-full">
+        <div className="grid lg:grid-cols-2 gap-12 items-center h-full">
           {/* Left content */}
           <div className="text-white space-y-6 animate-fade-in">
             <h1 className="text-4xl lg:text-6xl font-bold leading-tight">
@@ -37,11 +38,13 @@ const HeroSection = () => {
             </p>
             
             <div className="flex flex-col sm:flex-row gap-4 pt-4">
-              <Button size="lg" className="bg-gabon-yellow text-gabon-gray hover:bg-gabon-yellow/90 px-8 py-4 text-lg font-semibold">
-                Explorer les Produits
-                <ArrowRight className="ml-2 w-5 h-5" />
-              </Button>
-              <Button size="lg" variant="outline" className="border-white text-white hover:bg-white hover:text-gabon-green px-8 py-4 text-lg font-semibold">
+              <Link to="/products">
+                <Button size="lg" className="bg-gabon-yellow text-gabon-gray hover:bg-gabon-yellow/90 px-8 py-4 text-lg font-semibold">
+                  Explorer les Produits
+                  <ArrowRight className="ml-2 w-5 h-5" />
+                </Button>
+              </Link>
+              <Button size="lg" variant="outline" className="border-white text-white hover:bg-white hover:text-gabon-green bg-transparent px-8 py-4 text-lg font-semibold">
                 Devenir Vendeur
               </Button>
             </div>
