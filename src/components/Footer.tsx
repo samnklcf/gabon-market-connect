@@ -3,6 +3,7 @@ import React from 'react';
 import { Facebook, Instagram, Twitter, Mail, Phone, MapPin } from 'lucide-react';
 import { Button } from '@/components/ui/button';
 import { Input } from '@/components/ui/input';
+import { Link } from 'react-router-dom';
 
 const Footer = () => {
   return (
@@ -54,9 +55,9 @@ const Footer = () => {
             <div>
               <h4 className="text-lg font-semibold mb-4 text-white">Liens Rapides</h4>
               <ul className="space-y-3">
-                <li><a href="#" className="text-gray-300 hover:text-gabon-yellow transition-colors text-sm">À Propos</a></li>
+                <li><Link to="/about" className="text-gray-300 hover:text-gabon-yellow transition-colors text-sm">À Propos</Link></li>
                 <li><a href="#" className="text-gray-300 hover:text-gabon-yellow transition-colors text-sm">Comment Ça Marche</a></li>
-                <li><a href="#" className="text-gray-300 hover:text-gabon-yellow transition-colors text-sm">Devenir Vendeur</a></li>
+                <li><Link to="/become-seller" className="text-gray-300 hover:text-gabon-yellow transition-colors text-sm">Devenir Vendeur</Link></li>
                 <li><a href="#" className="text-gray-300 hover:text-gabon-yellow transition-colors text-sm">Programme Partenaire</a></li>
                 <li><a href="#" className="text-gray-300 hover:text-gabon-yellow transition-colors text-sm">Carrières</a></li>
               </ul>
@@ -84,7 +85,7 @@ const Footer = () => {
                 </div>
                 <div className="flex items-center space-x-3">
                   <Phone className="w-5 h-5 text-gabon-yellow" />
-                  <span className="text-gray-300 text-sm">+241 XX XX XX XX</span>
+                  <span className="text-gray-300 text-sm">+241 74570040</span>
                 </div>
                 <div className="flex items-center space-x-3">
                   <Mail className="w-5 h-5 text-gabon-yellow" />

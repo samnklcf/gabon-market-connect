@@ -24,7 +24,9 @@ const Header = () => {
           <div className="flex items-center space-x-4">
             <span>Français</span>
             <span>|</span>
-            <span>Devenir Vendeur</span>
+            <Link to="/become-seller" className="hover:text-gabon-green transition-colors">
+              Devenir Vendeur
+            </Link>
           </div>
         </div>
 
@@ -56,10 +58,12 @@ const Header = () => {
 
           {/* Right navigation */}
           <div className="flex items-center space-x-4">
-            <Button variant="ghost" className="hidden md:flex items-center space-x-2">
-              <User className="w-5 h-5" />
-              <span>Connexion</span>
-            </Button>
+            <Link to="/login">
+              <Button variant="ghost" className="hidden md:flex items-center space-x-2">
+                <User className="w-5 h-5" />
+                <span>Connexion</span>
+              </Button>
+            </Link>
             <Link to="/cart">
               <Button variant="ghost" className="relative">
                 <ShoppingCart className="w-5 h-5" />
@@ -85,8 +89,8 @@ const Header = () => {
           <ul className="flex flex-col md:flex-row space-y-2 md:space-y-0 md:space-x-8">
             <li><Link to="/" className="text-gabon-gray hover:text-gabon-green font-medium transition-colors">Accueil</Link></li>
             <li><Link to="/products" className="text-gabon-gray hover:text-gabon-green font-medium transition-colors">Tous les Produits</Link></li>
-            <li><a href="#" className="text-gabon-gray hover:text-gabon-green font-medium transition-colors">Produits Italiens</a></li>
-            <li><a href="#" className="text-gabon-gray hover:text-gabon-green font-medium transition-colors">Artisanat Gabonais</a></li>
+            <li><Link to="/italian-products" className="text-gabon-gray hover:text-gabon-green font-medium transition-colors">Produits Italiens</Link></li>
+            <li><Link to="/gabon-crafts" className="text-gabon-gray hover:text-gabon-green font-medium transition-colors">Artisanat Gabonais</Link></li>
             <li><a href="#" className="text-gabon-gray hover:text-gabon-green font-medium transition-colors">Électronique</a></li>
             <li><a href="#" className="text-gabon-gray hover:text-gabon-green font-medium transition-colors">Mode & Beauté</a></li>
             <li><a href="#" className="text-gabon-gray hover:text-gabon-green font-medium transition-colors">Promotions</a></li>

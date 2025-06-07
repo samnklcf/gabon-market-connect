@@ -1,9 +1,9 @@
-
 import React from 'react';
 import { Card, CardContent } from '@/components/ui/card';
 import { Button } from '@/components/ui/button';
 import { Badge } from '@/components/ui/badge';
 import { Star, Heart, ShoppingCart } from 'lucide-react';
+import { Link } from 'react-router-dom';
 
 const products = [
   {
@@ -147,9 +147,11 @@ const FeaturedProducts = () => {
         </div>
 
         <div className="text-center mt-12">
-          <Button size="lg" variant="outline" className="border-gabon-green text-gabon-green hover:bg-gabon-green hover:text-white px-8">
-            Voir Tous les Produits
-          </Button>
+          <Link to="/products">
+            <Button size="lg" variant="outline" className="border-gabon-green text-gabon-green hover:bg-gabon-green hover:text-white px-8">
+              Voir Tous les Produits
+            </Button>
+          </Link>
         </div>
       </div>
     </section>
