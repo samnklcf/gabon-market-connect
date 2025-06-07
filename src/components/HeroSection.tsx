@@ -5,9 +5,23 @@ import { ArrowRight, ShoppingBag, Truck, Shield } from 'lucide-react';
 
 const HeroSection = () => {
   return (
-    <section className="relative overflow-hidden bg-gradient-to-br from-gabon-green via-gabon-blue to-gabon-green hero-pattern">
-      <div className="container mx-auto px-4 py-16 lg:py-24">
-        <div className="grid lg:grid-cols-2 gap-12 items-center">
+    <section className="relative overflow-hidden min-h-screen">
+      {/* Background image */}
+      <div 
+        className="absolute inset-0 bg-cover bg-center bg-no-repeat"
+        style={{
+          backgroundImage: 'url(https://images.unsplash.com/photo-1605810230434-7631ac76ec81?ixlib=rb-4.0.3&auto=format&fit=crop&w=2000&q=80)'
+        }}
+      />
+      
+      {/* Overlay with gradient */}
+      <div className="absolute inset-0 bg-gradient-to-br from-gabon-green/90 via-gabon-blue/85 to-gabon-green/90"></div>
+      
+      {/* Hero pattern overlay */}
+      <div className="absolute inset-0 hero-pattern"></div>
+
+      <div className="relative container mx-auto px-4 py-16 lg:py-24">
+        <div className="grid lg:grid-cols-2 gap-12 items-center min-h-[80vh]">
           {/* Left content */}
           <div className="text-white space-y-6 animate-fade-in">
             <h1 className="text-4xl lg:text-6xl font-bold leading-tight">
@@ -35,7 +49,7 @@ const HeroSection = () => {
             {/* Features */}
             <div className="grid grid-cols-1 sm:grid-cols-3 gap-6 pt-8">
               <div className="flex items-center space-x-3">
-                <div className="bg-white/20 p-3 rounded-full">
+                <div className="bg-white/20 p-3 rounded-full backdrop-blur-sm">
                   <ShoppingBag className="w-6 h-6 text-white" />
                 </div>
                 <div>
@@ -44,7 +58,7 @@ const HeroSection = () => {
                 </div>
               </div>
               <div className="flex items-center space-x-3">
-                <div className="bg-white/20 p-3 rounded-full">
+                <div className="bg-white/20 p-3 rounded-full backdrop-blur-sm">
                   <Truck className="w-6 h-6 text-white" />
                 </div>
                 <div>
@@ -53,7 +67,7 @@ const HeroSection = () => {
                 </div>
               </div>
               <div className="flex items-center space-x-3">
-                <div className="bg-white/20 p-3 rounded-full">
+                <div className="bg-white/20 p-3 rounded-full backdrop-blur-sm">
                   <Shield className="w-6 h-6 text-white" />
                 </div>
                 <div>
