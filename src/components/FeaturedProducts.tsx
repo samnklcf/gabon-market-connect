@@ -5,6 +5,12 @@ import { Badge } from '@/components/ui/badge';
 import { Star, Heart, ShoppingCart } from 'lucide-react';
 import { Link } from 'react-router-dom';
 
+// Import product images
+import maskGabon from '@/assets/mask-gabon.webp';
+import applianceItalian from '@/assets/appliance-italian.webp';
+import textileGabon from '@/assets/textile-gabon.webp';
+import watchItalian from '@/assets/watch-italian.webp';
+
 const products = [
   {
     id: 1,
@@ -12,7 +18,7 @@ const products = [
     price: "45,000",
     originalPrice: "55,000",
     currency: "FCFA",
-    image: "🎭",
+    image: maskGabon,
     rating: 4.8,
     reviews: 23,
     seller: "Artisan Libreville",
@@ -25,7 +31,7 @@ const products = [
     price: "850,000",
     originalPrice: "950,000",
     currency: "FCFA",
-    image: "🏠",
+    image: applianceItalian,
     rating: 4.9,
     reviews: 15,
     seller: "ElectroItalia",
@@ -38,7 +44,7 @@ const products = [
     price: "25,000",
     originalPrice: null,
     currency: "FCFA",
-    image: "🧵",
+    image: textileGabon,
     rating: 4.7,
     reviews: 34,
     seller: "Tissus du Gabon",
@@ -51,7 +57,7 @@ const products = [
     price: "320,000",
     originalPrice: "380,000",
     currency: "FCFA",
-    image: "⌚",
+    image: watchItalian,
     rating: 4.9,
     reviews: 12,
     seller: "Luxury Milano",
@@ -78,10 +84,12 @@ const FeaturedProducts = () => {
             <Card key={product.id} className="group cursor-pointer transition-all duration-300 hover:shadow-xl border-0 overflow-hidden">
               <CardContent className="p-0">
                 {/* Product Image */}
-                <div className="relative bg-gradient-to-br from-gray-100 to-gray-200 h-48 flex items-center justify-center overflow-hidden">
-                  <span className="text-6xl group-hover:scale-110 transition-transform duration-300">
-                    {product.image}
-                  </span>
+                <div className="relative bg-gradient-to-br from-gray-100 to-gray-200 h-48 overflow-hidden">
+                  <img 
+                    src={product.image} 
+                    alt={product.name}
+                    className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-300"
+                  />
                   {product.badge && (
                     <Badge className={`absolute top-3 left-3 ${
                       product.badge === 'Promo' ? 'bg-red-500' :

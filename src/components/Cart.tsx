@@ -5,13 +5,18 @@ import { Button } from '@/components/ui/button';
 import { Badge } from '@/components/ui/badge';
 import { Trash2, Plus, Minus, ShoppingBag } from 'lucide-react';
 
+// Import cart product images
+import maskGabon from '@/assets/mask-gabon.webp';
+import applianceItalian from '@/assets/appliance-italian.webp';
+import textileGabon from '@/assets/textile-gabon.webp';
+
 const cartItems = [
   {
     id: 1,
     name: "Masque Traditionnel Fang",
     price: 45000,
     quantity: 1,
-    image: "🎭",
+    image: maskGabon,
     seller: "Artisan Libreville"
   },
   {
@@ -19,7 +24,7 @@ const cartItems = [
     name: "Lave-vaisselle Italien Bosch",
     price: 850000,
     quantity: 1,
-    image: "🏠",
+    image: applianceItalian,
     seller: "ElectroItalia"
   },
   {
@@ -27,7 +32,7 @@ const cartItems = [
     name: "Tissu Wax Authentique",
     price: 25000,
     quantity: 2,
-    image: "🧵",
+    image: textileGabon,
     seller: "Tissus du Gabon"
   }
 ];
@@ -82,8 +87,12 @@ const Cart = () => {
               <Card key={item.id}>
                 <CardContent className="p-6">
                   <div className="flex items-center space-x-4">
-                    <div className="w-20 h-20 bg-gradient-to-br from-gray-100 to-gray-200 rounded-lg flex items-center justify-center">
-                      <span className="text-2xl">{item.image}</span>
+                    <div className="w-20 h-20 bg-gradient-to-br from-gray-100 to-gray-200 rounded-lg overflow-hidden">
+                      <img 
+                        src={item.image} 
+                        alt={item.name}
+                        className="w-full h-full object-cover"
+                      />
                     </div>
                     
                     <div className="flex-1">

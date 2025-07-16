@@ -3,6 +3,7 @@ import React from 'react';
 import { Button } from '@/components/ui/button';
 import { ArrowRight, ShoppingBag, Truck, Shield } from 'lucide-react';
 import { Link } from 'react-router-dom';
+import heroMarketplace from '@/assets/hero-marketplace.webp';
 
 const HeroSection = () => {
   return (
@@ -11,7 +12,7 @@ const HeroSection = () => {
       <div 
         className="absolute inset-0 bg-cover bg-center bg-no-repeat"
         style={{
-          backgroundImage: 'url(https://images.unsplash.com/photo-1605810230434-7631ac76ec81?ixlib=rb-4.0.3&auto=format&fit=crop&w=2000&q=80)'
+          backgroundImage: `url(${heroMarketplace})`
         }}
       />
       

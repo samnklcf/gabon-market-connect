@@ -5,6 +5,27 @@ import { Button } from '@/components/ui/button';
 import { Badge } from '@/components/ui/badge';
 import { Star, Heart, ShoppingCart } from 'lucide-react';
 
+// Import all product images
+import maskGabon from '@/assets/mask-gabon.webp';
+import applianceItalian from '@/assets/appliance-italian.webp';
+import textileGabon from '@/assets/textile-gabon.webp';
+import watchItalian from '@/assets/watch-italian.webp';
+import smartphone from '@/assets/smartphone.webp';
+import coffeeItalian from '@/assets/coffee-italian.webp';
+import necklaceGabon from '@/assets/necklace-gabon.webp';
+import tv from '@/assets/tv.webp';
+import dressItalian from '@/assets/dress-italian.webp';
+import sculptureGabon from '@/assets/sculpture-gabon.webp';
+import laptop from '@/assets/laptop.webp';
+import honey from '@/assets/honey.webp';
+import sneakersItalian from '@/assets/sneakers-italian.webp';
+import sofa from '@/assets/sofa.webp';
+import spices from '@/assets/spices.webp';
+import handbagItalian from '@/assets/handbag-italian.webp';
+import camera from '@/assets/camera.webp';
+import lightbulb from '@/assets/lightbulb.webp';
+import oliveOilItalian from '@/assets/olive-oil-italian.webp';
+
 const products = [
   {
     id: 1,
@@ -12,7 +33,7 @@ const products = [
     price: "45,000",
     originalPrice: "55,000",
     currency: "FCFA",
-    image: "🎭",
+    image: maskGabon,
     rating: 4.8,
     reviews: 23,
     seller: "Artisan Libreville",
@@ -25,7 +46,7 @@ const products = [
     price: "850,000",
     originalPrice: "950,000",
     currency: "FCFA",
-    image: "🏠",
+    image: applianceItalian,
     rating: 4.9,
     reviews: 15,
     seller: "ElectroItalia",
@@ -38,7 +59,7 @@ const products = [
     price: "25,000",
     originalPrice: null,
     currency: "FCFA",
-    image: "🧵",
+    image: textileGabon,
     rating: 4.7,
     reviews: 34,
     seller: "Tissus du Gabon",
@@ -51,7 +72,7 @@ const products = [
     price: "320,000",
     originalPrice: "380,000",
     currency: "FCFA",
-    image: "⌚",
+    image: watchItalian,
     rating: 4.9,
     reviews: 12,
     seller: "Luxury Milano",
@@ -64,7 +85,7 @@ const products = [
     price: "450,000",
     originalPrice: null,
     currency: "FCFA",
-    image: "📱",
+    image: smartphone,
     rating: 4.6,
     reviews: 87,
     seller: "TechGabon",
@@ -77,7 +98,7 @@ const products = [
     price: "15,000",
     originalPrice: "18,000",
     currency: "FCFA",
-    image: "☕",
+    image: coffeeItalian,
     rating: 4.8,
     reviews: 156,
     seller: "Plantations Gabonaises",
@@ -90,7 +111,7 @@ const products = [
     price: "65,000",
     originalPrice: null,
     currency: "FCFA",
-    image: "📿",
+    image: necklaceGabon,
     rating: 4.7,
     reviews: 43,
     seller: "Bijoux Ancestraux",
@@ -103,7 +124,7 @@ const products = [
     price: "680,000",
     originalPrice: "750,000",
     currency: "FCFA",
-    image: "📺",
+    image: tv,
     rating: 4.5,
     reviews: 29,
     seller: "ElectroMax",
@@ -116,7 +137,7 @@ const products = [
     price: "85,000",
     originalPrice: null,
     currency: "FCFA",
-    image: "👗",
+    image: dressItalian,
     rating: 4.9,
     reviews: 67,
     seller: "Mode Afrique",
@@ -129,7 +150,7 @@ const products = [
     price: "120,000",
     originalPrice: "150,000",
     currency: "FCFA",
-    image: "🗿",
+    image: sculptureGabon,
     rating: 4.8,
     reviews: 18,
     seller: "Art Traditionnel",
@@ -142,7 +163,7 @@ const products = [
     price: "780,000",
     originalPrice: null,
     currency: "FCFA",
-    image: "💻",
+    image: laptop,
     rating: 4.4,
     reviews: 93,
     seller: "Informatique Pro",
@@ -155,7 +176,7 @@ const products = [
     price: "22,000",
     originalPrice: null,
     currency: "FCFA",
-    image: "🍯",
+    image: honey,
     rating: 4.9,
     reviews: 124,
     seller: "Apiculture Locale",
@@ -168,7 +189,7 @@ const products = [
     price: "95,000",
     originalPrice: "110,000",
     currency: "FCFA",
-    image: "👟",
+    image: sneakersItalian,
     rating: 4.6,
     reviews: 78,
     seller: "Sport Fashion",
@@ -181,7 +202,7 @@ const products = [
     price: "1,200,000",
     originalPrice: "1,400,000",
     currency: "FCFA",
-    image: "🛋️",
+    image: sofa,
     rating: 4.7,
     reviews: 24,
     seller: "Mobilier Milano",
@@ -194,7 +215,7 @@ const products = [
     price: "650,000",
     originalPrice: null,
     currency: "FCFA",
-    image: "📱",
+    image: smartphone,
     rating: 4.8,
     reviews: 156,
     seller: "Apple Store Gabon",
@@ -207,7 +228,7 @@ const products = [
     price: "18,000",
     originalPrice: null,
     currency: "FCFA",
-    image: "🌶️",
+    image: spices,
     rating: 4.5,
     reviews: 89,
     seller: "Saveurs d'Afrique",
@@ -220,7 +241,7 @@ const products = [
     price: "180,000",
     originalPrice: "220,000",
     currency: "FCFA",
-    image: "👜",
+    image: handbagItalian,
     rating: 4.8,
     reviews: 45,
     seller: "Maroquinerie Milano",
@@ -233,7 +254,7 @@ const products = [
     price: "520,000",
     originalPrice: null,
     currency: "FCFA",
-    image: "📷",
+    image: camera,
     rating: 4.7,
     reviews: 38,
     seller: "Photo Pro",
@@ -246,7 +267,7 @@ const products = [
     price: "35,000",
     originalPrice: null,
     currency: "FCFA",
-    image: "💡",
+    image: lightbulb,
     rating: 4.6,
     reviews: 62,
     seller: "Déco Nature",
@@ -259,7 +280,7 @@ const products = [
     price: "12,000",
     originalPrice: "15,000",
     currency: "FCFA",
-    image: "🫒",
+    image: oliveOilItalian,
     rating: 4.9,
     reviews: 234,
     seller: "Agriculture Bio Gabon",
@@ -317,9 +338,11 @@ const ProductGrid = ({ category, searchTerm, sortBy, viewMode }: ProductGridProp
             <CardContent className="p-0">
               {/* Product Image */}
               <div className="relative bg-gradient-to-br from-gray-100 to-gray-200 h-48 flex items-center justify-center overflow-hidden">
-                <span className="text-6xl group-hover:scale-110 transition-transform duration-300">
-                  {product.image}
-                </span>
+                <img 
+                  src={product.image} 
+                  alt={product.name}
+                  className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-300"
+                />
                 {product.badge && (
                   <Badge className={`absolute top-3 left-3 ${
                     product.badge === 'Promo' ? 'bg-red-500' :
