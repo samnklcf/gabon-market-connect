@@ -2,6 +2,7 @@
 import React from 'react';
 import { Card, CardContent } from '@/components/ui/card';
 import { Shirt, Smartphone, Palette, ChefHat, Gem, Home } from 'lucide-react';
+import { Link } from 'react-router-dom';
 
 const categories = [
   {
@@ -9,42 +10,48 @@ const categories = [
     title: "Électronique Italienne",
     description: "Appareils et gadgets de qualité",
     color: "bg-blue-500",
-    items: "250+ produits"
+    items: "250+ produits",
+    link: "/italian-products"
   },
   {
     icon: Shirt,
     title: "Mode & Vêtements",
     description: "Style italien et africain",
     color: "bg-purple-500",
-    items: "180+ produits"
+    items: "180+ produits",
+    link: "/italian-products"
   },
   {
     icon: Palette,
     title: "Art & Artisanat",
     description: "Créations gabonaises authentiques",
     color: "bg-gabon-green",
-    items: "120+ créations"
+    items: "120+ créations",
+    link: "/gabon-crafts"
   },
   {
     icon: ChefHat,
     title: "Gastronomie",
     description: "Saveurs locales et italiennes",
     color: "bg-orange-500",
-    items: "90+ produits"
+    items: "90+ produits",
+    link: "/italian-products"
   },
   {
     icon: Gem,
     title: "Bijoux & Accessoires",
     description: "Pièces uniques et précieuses",
     color: "bg-pink-500",
-    items: "75+ articles"
+    items: "75+ articles",
+    link: "/gabon-crafts"
   },
   {
     icon: Home,
     title: "Maison & Décoration",
     description: "Électroménager et déco",
     color: "bg-gabon-blue",
-    items: "300+ produits"
+    items: "300+ produits",
+    link: "/italian-products"
   }
 ];
 
@@ -65,31 +72,33 @@ const CategorySection = () => {
           {categories.map((category, index) => {
             const IconComponent = category.icon;
             return (
-              <Card key={index} className="group cursor-pointer transition-all duration-300 hover:shadow-xl hover:-translate-y-2 border-0 overflow-hidden">
-                <CardContent className="p-6">
-                  <div className="flex items-start space-x-4">
-                    <div className={`${category.color} p-3 rounded-xl text-white group-hover:scale-110 transition-transform duration-300`}>
-                      <IconComponent className="w-6 h-6" />
-                    </div>
-                    <div className="flex-1">
-                      <h3 className="font-bold text-lg text-gabon-gray mb-2 group-hover:text-gabon-green transition-colors">
-                        {category.title}
-                      </h3>
-                      <p className="text-gray-600 mb-3 text-sm">
-                        {category.description}
-                      </p>
-                      <div className="flex items-center justify-between">
-                        <span className="text-xs font-medium text-gabon-green bg-gabon-green/10 px-3 py-1 rounded-full">
-                          {category.items}
-                        </span>
-                        <span className="text-gabon-blue text-sm font-medium group-hover:translate-x-1 transition-transform">
-                          Explorer →
-                        </span>
+              <Link key={index} to={category.link}>
+                <Card className="group cursor-pointer transition-all duration-300 hover:shadow-xl hover:-translate-y-2 border-0 overflow-hidden">
+                  <CardContent className="p-6">
+                    <div className="flex items-start space-x-4">
+                      <div className={`${category.color} p-3 rounded-xl text-white group-hover:scale-110 transition-transform duration-300`}>
+                        <IconComponent className="w-6 h-6" />
+                      </div>
+                      <div className="flex-1">
+                        <h3 className="font-bold text-lg text-gabon-gray mb-2 group-hover:text-gabon-green transition-colors">
+                          {category.title}
+                        </h3>
+                        <p className="text-gray-600 mb-3 text-sm">
+                          {category.description}
+                        </p>
+                        <div className="flex items-center justify-between">
+                          <span className="text-xs font-medium text-gabon-green bg-gabon-green/10 px-3 py-1 rounded-full">
+                            {category.items}
+                          </span>
+                          <span className="text-gabon-blue text-sm font-medium group-hover:translate-x-1 transition-transform">
+                            Explorer →
+                          </span>
+                        </div>
                       </div>
                     </div>
-                  </div>
-                </CardContent>
-              </Card>
+                  </CardContent>
+                </Card>
+              </Link>
             );
           })}
         </div>
